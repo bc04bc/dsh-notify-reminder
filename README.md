@@ -26,7 +26,7 @@ npm install https://github.com/bc04bc/dsh-notify-reminder/archive/refs/heads/mai
       name: dsh-notify-reminder
 ```
 
-Restart `dsh web`. A startup toast (`🔔 DSH 提醒已启用`) confirms the channel works.
+Restart the `dsh web` **backend process** (stop and start it again; refreshing the browser page is not enough — the loader reads the patch only at process startup). A startup toast (`🔔 DSH 提醒已启用`) confirms the channel works.
 
 ## What triggers a toast
 

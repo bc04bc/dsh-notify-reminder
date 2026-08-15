@@ -26,7 +26,7 @@ npm install https://github.com/bc04bc/dsh-notify-reminder/archive/refs/heads/mai
       name: dsh-notify-reminder
 ```
 
-重启 `dsh web`。启动 toast(`🔔 DSH 提醒已启用`)表示通道正常。
+重启 `dsh web` **后端进程**(停掉再重新启动;仅刷新浏览器页面无效——loader 只在进程启动时读取 patch)。启动 toast(`🔔 DSH 提醒已启用`)表示通道正常。
 
 ## 触发时机
 
