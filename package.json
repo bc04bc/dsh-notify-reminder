@@ -1,0 +1,40 @@
+{
+  "name": "dsh-notify-reminder",
+  "description": "Windows toast notifications for DeepSeek Harness: task completion, subagent/workflow end, background jobs, and permission requests",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/index.d.ts"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bc04bc/dsh-notify-reminder.git"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "deepseek-harness",
+    "notification",
+    "toast",
+    "windows"
+  ],
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1",
+    "node-notifier": "^10.0.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  }
+}
