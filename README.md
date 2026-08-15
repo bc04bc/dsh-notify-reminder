@@ -1,6 +1,5 @@
 # dsh-notify-reminder
 
-> 为防止因为 dsh 缺少需要 user 介入时的提醒所浪费时间,故开发本插件。
 > To prevent wasted time when dsh lacks a notification that the user needs to step in, this plugin was created.
 
 Windows toast notifications for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness): task completion, subagent/workflow end, background-job completion, and permission requests.
