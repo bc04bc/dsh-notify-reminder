@@ -1,5 +1,7 @@
 # dsh-notify-reminder
 
+> 为防止因为 dsh 缺少需要 user 介入时的提醒所浪费时间,故开发本插件。
+
 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的 Windows toast 提醒插件:任务结束、子代理/工作流结束、后台任务完成、权限请求提醒。
 
 [English](README.md) | 中文
