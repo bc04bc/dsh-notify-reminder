@@ -12,10 +12,12 @@ DeepSeek Harness is often embedded in WebView2 hosts or browsed in tabs where th
 
 ## Install
 
-As a normal host-plane plugin row in your profile's `cordis.patch.yml`:
+As a normal host-plane plugin row in your profile's `cordis.patch.yml`. Install the package into your profile first (run inside `$DSH_HOME/profiles/<profile>`, e.g. `~/.dsh/profiles/web`):
 
 ```bash
-npm install -g dsh-notify-reminder   # or add it to your profile's node_modules
+npm install github:bc04bc/dsh-notify-reminder
+# or, if `github:` git access fails: 
+npm install https://github.com/bc04bc/dsh-notify-reminder/archive/refs/heads/main.tar.gz
 ```
 
 ```yaml

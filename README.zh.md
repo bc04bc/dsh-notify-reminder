@@ -12,10 +12,12 @@ DeepSeek Harness 常被嵌入 WebView2 宿主或在标签页中使用,浏览器 
 
 ## 安装
 
-作为普通 host 平面插件行,注册到 profile 的 `cordis.patch.yml`:
+作为普通 host 平面插件行,注册到 profile 的 `cordis.patch.yml`。先把包安装到 profile(在 `$DSH_HOME/profiles/<profile>` 目录内执行,例如 `~/.dsh/profiles/web`):
 
 ```bash
-npm install -g dsh-notify-reminder   # 或安装到 profile 的 node_modules
+npm install github:bc04bc/dsh-notify-reminder
+# 或,若 github: 前缀走 git 失败:
+npm install https://github.com/bc04bc/dsh-notify-reminder/archive/refs/heads/main.tar.gz
 ```
 
 ```yaml
