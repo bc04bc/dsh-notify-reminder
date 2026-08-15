@@ -38,6 +38,8 @@ npm install https://github.com/bc04bc/dsh-notify-reminder/archive/refs/heads/mai
 | 工作流结束(`workflow/end`) | `⚙️ 工作流结束` |
 | 后台任务完成(`jobs.onJobDone`) | `🛠 后台任务完成` |
 
+toast 文案跟随 **Windows 系统界面语言**:`zh*` 系统显示中文(`✅ 任务结束`、`🔔 需要权限批准`、…),其他语言显示英文(`✅ Task finished`、`🔔 Permission required`、…)。可用 `locale` 覆盖。
+
 同类通知默认节流 `throttleMs`(默认 10 秒),避免密集事件刷屏。
 
 ## 配置
@@ -49,6 +51,7 @@ npm install https://github.com/bc04bc/dsh-notify-reminder/archive/refs/heads/mai
     throttleMs: 10000   # 可选;同类通知最小间隔(毫秒)
     startupNotice: true # 可选;加载时是否发启动 toast
     appId: DeepSeek Harness # 可选;Windows 通知的应用标识
+    locale: auto        # 可选;auto(跟随系统界面语言)、zh 或 en
 ```
 
 ## 要求

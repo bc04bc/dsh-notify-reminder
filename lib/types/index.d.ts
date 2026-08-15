@@ -16,9 +16,17 @@ export interface Config {
     startupNotice?: boolean;
     /** Optional app id for the Windows notification. */
     appId?: string;
+    /** Toast language: auto (system UI language), zh, or en. */
+    locale?: 'auto' | 'zh' | 'en';
 }
 /** Schemastery validation for {@link Config}. */
 export declare const Config: z<Config>;
+/**
+ * Detect the Windows system UI language (e.g. `zh-CN` -> `zh`, `en-US` -> `en`).
+ * Best-effort: any failure falls back to `en`.
+ * @returns the language key.
+ */
+export declare function detectSystemLocale(): 'zh' | 'en';
 /**
  * Register session/job listeners for the lifetime of `ctx`.
  * @param ctx - plugin context; every listener is disposed with it.

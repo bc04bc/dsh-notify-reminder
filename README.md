@@ -32,11 +32,13 @@ Restart `dsh web`. A startup toast (`🔔 DSH 提醒已启用`) confirms the cha
 
 | Event | Toast |
 |---|---|
-| A turn ends (`turn/end`) | `✅ 任务结束` with the reason (completed / error / aborted / interrupted / max-tokens / …) |
-| A permission request is asked (`approval/asked`) | `🔔 需要权限批准` with the tool name and reason |
-| A subagent settles (`subagent/end`) | `🤖 子代理结束` |
-| A workflow run ends (`workflow/end`) | `⚙️ 工作流结束` |
-| A background job completes (`jobs.onJobDone`) | `🛠 后台任务完成` |
+| A turn ends (`turn/end`) | `✅ Task finished` with the reason (completed / error / aborted / interrupted / max-tokens / …) |
+| A permission request is asked (`approval/asked`) | `🔔 Permission required` with the tool name and reason |
+| A subagent settles (`subagent/end`) | `🤖 Subagent finished` |
+| A workflow run ends (`workflow/end`) | `⚙️ Workflow finished` |
+| A background job completes (`jobs.onJobDone`) | `🛠 Background job done` |
+
+Toast copy follows the **Windows system UI language**: `zh*` systems get Chinese toasts (`✅ 任务结束`, `🔔 需要权限批准`, …), everything else gets English. Override with `locale`.
 
 Same-kind notifications are throttled (`throttleMs`, default 10 s) to avoid toast floods from dense event streams.
 
@@ -49,6 +51,7 @@ Same-kind notifications are throttled (`throttleMs`, default 10 s) to avoid toas
     throttleMs: 10000   # optional; min ms between two toasts of the same kind
     startupNotice: true # optional; show a startup toast on load
     appId: DeepSeek Harness # optional; Windows notification app id
+    locale: auto        # optional; auto (system UI language), zh, or en
 ```
 
 ## Requirements
